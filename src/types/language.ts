@@ -1,10 +1,14 @@
 import type { DeepRecord } from "utils/types";
 
-type Entry = DeepRecord<string | undefined>;
+type LangEntry = DeepRecord<string | undefined>;
 
-interface Language<T extends Entry = Entry> {
-  entries: T;
-  name: string;
+interface LangData {
+  readonly name: string;
 }
 
-export type { Entry, Language };
+interface Lang<E extends LangEntry = LangEntry> {
+  readonly data: LangData;
+  entries: E;
+}
+
+export type { Lang, LangData, LangEntry };
