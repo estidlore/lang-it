@@ -1,6 +1,7 @@
 import type { LangData } from "types/language";
 
-import { LangIt, LangState } from ".";
+import { LangIt } from "./LangIt";
+import { LangState } from "./LangState";
 
 type LangKey = "ENG" | "SPA";
 
